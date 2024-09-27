@@ -2,12 +2,12 @@
 
 ## About 
 *F*ields of *T*he *W*orld (FTW) is a comprehensive benchmark dataset designed to enhance the development of machine learning models for instance segmentation of agricultural field boundaries. 
-This dataset aims to meet the growing need for accurate and scalable field boundary data for global agricultural monitoring and assessments.
+This dataset aims to meet the growing need for accurate and scalable field boundary data for global agricultural monitoring and assessments. You can learn more at [fieldsofthe.world](https://fieldsofthe.world)
 
 This github organization contains all the code to download and use the FTW dataset, along with other related repositories.
 
-The dataset is available on Source Cooperative ([link](https://beta.source.coop/kerner-lab/fields-of-the-world/)), and the [ftw-datasets](https://github.com/fieldsoftheworld/ftw-baselines) 
-repository provides tools to easily get the data and start building models.
+The dataset is available on Source Cooperative ([link](https://beta.source.coop/kerner-lab/fields-of-the-world/)), and the [ftw-baselines](https://github.com/fieldsoftheworld/ftw-baselines) 
+repository provides tools to easily get the data and start building models. You can also suggest new datasets to add in the [ftw-datasets-list issue tracker](https://github.com/fieldsoftheworld/ftw-datasets-list/issues)
 
 ### Key Features:
 
