@@ -1,10 +1,13 @@
-# *F*ields of *T*he *W*orld (FTW)
+# **F**ields of **T**he **W**orld (FTW)
 
-## About 
+## About
 
-*F*ields of *T*he *W*orld (FTW) is an open, community-driven initiative to advance global agricultural intelligence by building and sharing tools, datasets, and models for field boundary detection. Originally launched as a benchmark dataset, FTW has expanded into a full ecosystem supporting research, development, and deployment of geospatial workflows for the cloud.
 
-We aim to make field-scale analysis more accessible, reproducible, and comparable, enabling better land use monitoring, food security efforts, and agricultural insights. You can learn more at [fieldsofthe.world](https://fieldsofthe.world).
+
+
+The goal of **F**ields of **T**he **W**orld (FTW) is to build a global field boundary dataset. The effort originally launched as a benchmark dataset, which is still the core of the effort. FTW has expanded into a full ecosystem supporting research, development, and deployment of geospatial workflows for the cloud. The effort is an open, community-driven initiative to advance global agricultural intelligence by building and sharing tools, datasets, and models for field boundary detection. Field boundaries was an obvious first focus area, and perhaps in the future the effort could go beyond boundaries.
+
+Most countries don’t have comprehensive maps of their agricultural fields, and even fewer have up-to-date information on what crops are growing or whether sustainable practices are being used. Our approach to solving this is to leverage Earth observation data and AI to automatically detect field boundaries at scale. By combining open satellite imagery with machine learning, we aim to build a global, open, and regularly updated map of the world’s fields. The intention is that these field boundaries will enable better land use monitoring, food security efforts, and agricultural insights. You can learn more at [fieldsofthe.world](https://fieldsofthe.world).
 
 This GitHub organization contains all the code to download and use the FTW Benchmark Dataset, along with repositories that make it easy to run FTW models and generate field boundaries.
 
@@ -16,7 +19,7 @@ The dataset is available on Source Cooperative ([source.coop/kerner-lab/fields-o
 
 ### 🗂️ FTW Benchmark Dataset  
 
-Originally the core of the initiative, the **FTW Benchmark Dataset** is a global collection of labeled agricultural field boundaries, designed to benchmark model performance and support open research. It aggregates and harmonizes a number of open datasets into 1.6 million parcel boundaries and over 70,000 samples covering diverse agricultural landscapes across 4 continents and 24 countries.
+Originally the core of the initiative, the **FTW Benchmark Dataset** is a global collection of labeled agricultural field boundaries, designed to benchmark model performance and support open research. It aggregates and harmonizes a number of open datasets into 1.6 million parcel boundaries and over 70,000 samples covering diverse agricultural landscapes across 4 continents and 24 countries. You can explore and download the dataset from Source Cooperative ([source.coop/kerner-lab/fields-of-the-world/](https://source.coop/kerner-lab/fields-of-the-world)).
 
 **What’s included in the Benchmark Dataset?**  
 
@@ -34,10 +37,10 @@ Reference implementations of machine learning models trained on the FTW Benchmar
 
 A growing suite of tools to support end-to-end workflows:
 
-- **Data access tools**: Python libraries and CLI tools to download and work with the benchmark dataset  
-- **Inference tools**: Scripts and utilities to run field boundary detection on new imagery  
-- **Formatting tools**: Resources to convert raw data into FTW-compliant format (e.g., fiboa to FTW train/test split)  
-- **QGIS Plugin**: A plugin to browse and interact with field data within QGIS. Currently in alpha
+- **Data access tools**: Python libraries and CLI tools to download and work with the benchmark dataset (FTW CLI, which you can find in the [ftw-baselines](https://github.com/fieldsoftheworld/ftw-baselines) repository)
+- **Inference tools**: Scripts and utilities to run field boundary detection on new imagery (FTW CLI, which you can find in the [ftw-baselines](https://github.com/fieldsoftheworld/ftw-baselines) repository)
+- **Formatting tools**: Resources to convert raw data into FTW-compliant format (e.g., fiboa to FTW train/test split) (fiboa CLI, which you can find in the [fiboa/cli](https://github.com/fiboa/cli) repository)
+- **QGIS Plugin**: A plugin to browse and interact with field data within QGIS. Currently in alpha ([ftw-qgis-plugin](https://github.com/fieldsoftheworld/ftw-qgis-plugin))
 
 ### 🌐 FTW Web App  
 
@@ -47,13 +50,21 @@ Improvements to the web app are under progress. See the codebase for the app at 
 
 The web app is powered by an API (see [github.com/fieldsoftheworld/ftw-inference-api](https://github.com/fieldsoftheworld/ftw-inference-api)) and deployed to AWS via [github.com/fieldsoftheworld/ftw-api-deployment](https://github.com/fieldsoftheworld/ftw-api-deployment)
 
-### 📡 FTW Source Data  
-
-Curated public datasets of manually labeled field boundaries—such as those hosted on [fiboa.org](https://fiboa.org)—that may serve as inputs to the benchmark dataset. These are raw sources prior to FTW formatting.
-
 ### 🗺️ FTW Data Products  
 
-Large-scale outputs of model-inferred field boundaries (e.g., country-wide field maps). These are versioned and published for external research, planning, and applications. 
+Large-scale outputs of model-inferred field boundaries (e.g., country-wide field maps). These are versioned and published for external research, planning, and applications.
+
+## Related Work
+
+### **Fi**eld **Bo**undaries for **A**griculture (fiboa)
+
+The **Fi**eld **Bo**undaries for **A**griculture (fiboa) project is focused on making field boundary data openly available in a unified format on a global scale.
+
+Curated public datasets of field boundaries from government sources and hand-labeling campaigns, that may serve as inputs to the benchmark dataset. These are converted to the [fiboa](https://fiboa.org) specification. Fiboa data can be found at [https://source.coop/fiboa](https://source.coop/fiboa).
+
+The data found in the Source Cooperative [kerner-lab](https://source.coop/kerner-lab) organization are in the fiboa format.
+
+In the future, FTW datasets may be sourced from the fiboa datasets prior to FTW subsetting and harmonization.
 
 ---
 
