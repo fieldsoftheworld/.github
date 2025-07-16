@@ -43,9 +43,9 @@ A growing suite of tools to support end-to-end workflows:
 
 A browser-based interface to easily run FTW models in any area of the world without running any code. Check out the FTW Web App at [fieldsofthe.world/ftw-inference-app](https://fieldsofthe.world/ftw-inference-app/).
 
-Improvements to the web app are under progress. See the codebase for the app at [github.com/fieldsoftheworld/ftw-inference-app](https://github.com/fieldsoftheworld/ftw-inference-app).
+Improvements to the web app are under progress. See the codebase for the app at [ftw-inference-app](https://github.com/fieldsoftheworld/ftw-inference-app).
 
-The web app is powered by an API (see [github.com/fieldsoftheworld/ftw-inference-api](https://github.com/fieldsoftheworld/ftw-inference-api)) and deployed to AWS via [github.com/fieldsoftheworld/ftw-api-deployment](https://github.com/fieldsoftheworld/ftw-api-deployment).
+The web app is powered by an API (see [ftw-inference-api](https://github.com/fieldsoftheworld/ftw-inference-api)) and deployed to AWS via [ftw-api-deployment](https://github.com/fieldsoftheworld/ftw-api-deployment).
 
 ### 🗺️ FTW Data Products  
 
@@ -78,3 +78,6 @@ We welcome contributions of:
 🧑‍💻 Check out our repositories  
 📬 [Follow the journey](https://groups.google.com/g/ftw-community) by joining the 'ftw-community' Google Group  
 🌐 [Join the working team](https://groups.google.com/g/ftw-team) meetings by joining the 'ftw-team' Google Group
+
+- **FTW General Progress Meeting** every 2 weeks on Thursday @  8am PT | 9am MT | 10am CT | 11am ET
+- **Scaling FTW Meeting** every 2 weeks on Tuesday @ 8am PT | 9am MT | 10am CT | 11am ET
