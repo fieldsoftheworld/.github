@@ -8,7 +8,7 @@ Most countries don’t have comprehensive maps of their agricultural fields, and
 
 This GitHub organization contains all the code to download and use the FTW Benchmark Dataset, along with repositories that make it easy to run FTW models and generate field boundaries.
 
-The FTW Benchmark Dataset is available on Source Cooperative ([source.coop/kerner-lab/fields-of-the-world/](https://source.coop/kerner-lab/fields-of-the-world)), and the [ftw-baselines](https://github.com/fieldsoftheworld/ftw-baselines) repository provides tools to easily start working with the FTW Benchmark Dataset, including tools for data pre-processing, model training, and evaluation. You can also suggest new datasets to add in the [ftw-datasets-list issue tracker](https://github.com/fieldsoftheworld/ftw-datasets-list/issues).
+The FTW Benchmark Dataset is available on Source Cooperative ([source.coop/kerner-lab/fields-of-the-world](https://source.coop/kerner-lab/fields-of-the-world)), and the [ftw-baselines](https://github.com/fieldsoftheworld/ftw-baselines) repository provides tools to easily start working with the FTW Benchmark Dataset, including tools for data pre-processing, model training, and evaluation. You can also suggest new datasets to add in the [ftw-datasets-list issue tracker](https://github.com/fieldsoftheworld/ftw-datasets-list/issues).
 
 ---
 
@@ -16,7 +16,7 @@ The FTW Benchmark Dataset is available on Source Cooperative ([source.coop/kerne
 
 ### 🗂️ FTW Benchmark Dataset  
 
-Originally the core of the initiative, the **FTW Benchmark Dataset** is a global collection of labeled agricultural field boundaries, designed to benchmark model performance and support open research. It aggregates and harmonizes a number of open datasets into 1.6 million parcel boundaries and over 70,000 samples covering diverse agricultural landscapes across 4 continents and 24 countries. You can explore and download the dataset from Source Cooperative ([source.coop/kerner-lab/fields-of-the-world/](https://source.coop/kerner-lab/fields-of-the-world)).
+Originally the core of the initiative, the **FTW Benchmark Dataset** is a global collection of labeled agricultural field boundaries, designed to benchmark model performance and support open research. It aggregates and harmonizes a number of open datasets into 1.6 million parcel boundaries and over 70,000 samples covering diverse agricultural landscapes across 4 continents and 24 countries. You can explore and download the dataset from Source Cooperative ([source.coop/kerner-lab/fields-of-the-world](https://source.coop/kerner-lab/fields-of-the-world)).
 
 **What’s included in the FTW Benchmark Dataset?**  
 
@@ -41,7 +41,7 @@ A growing suite of tools to support end-to-end workflows:
 
 ### 🌐 FTW Web App  
 
-A browser-based interface to easily run FTW models in any area of the world without running any code. Check out the FTW Web App at [fieldsofthe.world/ftw-inference-app/](https://fieldsofthe.world/ftw-inference-app/).
+A browser-based interface to easily run FTW models in any area of the world without running any code. Check out the FTW Web App at [fieldsofthe.world/ftw-inference-app](https://fieldsofthe.world/ftw-inference-app/).
 
 Improvements to the web app are under progress. See the codebase for the app at [github.com/fieldsoftheworld/ftw-inference-app](https://github.com/fieldsoftheworld/ftw-inference-app).
 
