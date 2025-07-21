@@ -1,36 +1,83 @@
-# *F*ields of *T*he *W*orld (FTW)
+# **F**ields of **T**he **W**orld (FTW)
 
-## About 
-*F*ields of *T*he *W*orld (FTW) is a comprehensive benchmark dataset designed to enhance the development of machine learning models for instance segmentation of agricultural field boundaries. 
-This dataset aims to meet the growing need for accurate and scalable field boundary data for global agricultural monitoring and assessments. You can learn more at [fieldsofthe.world](https://fieldsofthe.world)
+## About
 
-This github organization contains all the code to download and use the FTW dataset, along with other related repositories.
+The goal of **F**ields of **T**he **W**orld (FTW) is to build a global field boundary dataset. The effort originally launched as a benchmark dataset, which is still the core of the effort. FTW has expanded into a full ecosystem supporting research, development, and deployment of geospatial workflows for the cloud. The effort is an open, community-driven initiative to advance global agricultural intelligence by building and sharing tools, datasets, and models for field boundary detection. Field boundaries was an obvious first focus area, and perhaps in the future the effort could go beyond boundaries.
 
-The dataset is available on Source Cooperative ([link](https://beta.source.coop/kerner-lab/fields-of-the-world/)), and the [ftw-baselines](https://github.com/fieldsoftheworld/ftw-baselines) 
-repository provides tools to easily get the data and start building models. You can also suggest new datasets to add in the [ftw-datasets-list issue tracker](https://github.com/fieldsoftheworld/ftw-datasets-list/issues)
+Most countries don’t have comprehensive maps of their agricultural fields, and even fewer have up-to-date information on what crops are growing or whether sustainable practices are being used. Our approach to solving this is to leverage Earth observation data and AI to automatically detect field boundaries at scale. By combining open satellite imagery with machine learning, we aim to build a global, open, and regularly updated map of the world’s fields. The intention is that these field boundaries will enable better land use monitoring, food security efforts, and agricultural insights. You can learn more at [fieldsofthe.world](https://fieldsofthe.world).
 
-### Key Features:
+This GitHub organization contains all the code to download and use the FTW Benchmark Dataset, along with repositories that make it easy to run FTW models and generate field boundaries.
 
-1. **Near-Global Coverage**: FTW spans four continents—Europe, Africa, Asia, and South America—covering diverse agricultural landscapes across 24 countries. This extensive geographic coverage allows for the development of models that can generalize well to different agricultural practices and field types.
+The FTW Benchmark Dataset is available on Source Cooperative ([source.coop/kerner-lab/fields-of-the-world](https://source.coop/kerner-lab/fields-of-the-world)), and the [ftw-baselines](https://github.com/fieldsoftheworld/ftw-baselines) repository provides tools to easily start working with the FTW Benchmark Dataset, including tools for data pre-processing, model training, and evaluation. You can also suggest new datasets to add in the [ftw-datasets-list issue tracker](https://github.com/fieldsoftheworld/ftw-datasets-list/issues).
 
-2. **Large-Scale Dataset**: With approximately 1.6 million parcel boundaries and over 70,000 samples, FTW is significantly larger than previously available datasets. Each sample includes instance and semantic segmentation masks paired with multi-date, multi-spectral Sentinel-2 satellite images, enabling detailed temporal and spectral analysis.
+---
 
-3. **Multi-class Segmentation**: The dataset provides masks for both instance segmentation and semantic segmentation with different classes, including:
-   - **Instance Segmentation Masks**: To identify individual fields.
-   - **Semantic Segmentation Masks**: 
-     - Two-class masks: Background and polygon (field).
-     - Three-class masks: Background, polygon (field), and boundaries.
+## 🔎 What's in the FTW Ecosystem?
 
-4. **Spectral Richness**: The dataset includes RGB (Red, Green, Blue) and NIR (Near-Infrared) spectral bands from Sentinel-2 images.
+### 🗂️ FTW Benchmark Dataset  
 
-5. **Temporal Richness**: The dataset includes multi-date imagery to capture different stages of the growing season. Two images with distinct contrast differences were selected to represent these stages. To determine the date ranges for these images, the USDA Crop Calendar was initially referenced and then refined by selecting periods with minimal cloud cover and optimal contrast between the two images.
+Originally the core of the initiative, the **FTW Benchmark Dataset** is a global collection of labeled agricultural field boundaries, designed to benchmark model performance and support open research. It aggregates and harmonizes a number of open datasets into 1.6 million parcel boundaries and over 70,000 samples covering diverse agricultural landscapes across 4 continents and 24 countries. You can explore and download the dataset from Source Cooperative ([source.coop/kerner-lab/fields-of-the-world](https://source.coop/kerner-lab/fields-of-the-world)).
 
-6. **Comprehensive Data Splits**: The dataset is carefully divided into training, validation, and test sets to ensure accurate evaluation of model performance. For each country, larger tiles are divided into smaller chips measuring 1536x1536 m². To prevent data leakage due to spatial autocorrelation, a blocked random splitting strategy is used. Chips are grouped into 3×3 blocks, with 80% allocated to training, 10% to validation, and 10% to testing.
+**What’s included in the FTW Benchmark Dataset?**  
 
-7. **Metadata and Documentation**: The metadata and documentation provide crucial information to help users effectively interpret and utilize the dataset. It includes key details about the country of focus, temporal data collection windows, grid structures, and the year of collection.
+- Publicly available, labeled field boundaries from around the world  
+- Uniform data formatting and metadata schema  
+- A maintained subset of training/validation/test data  
+- Tools to evaluate model performance on shared benchmarks  
+- Contribution guidelines for submitting new datasets
 
-   1. **Country**: The geographic region the dataset focuses on.
-   2. **Crop Types**: Crop types used to filter the polygons in the dataset, with specific keywords used for filtering.
-   3. **Seasons**: Date ranges defining the temporal windows for data collection.
-   4. **Year of Collection**: The year when the polygon boundaries were captured.
-   5. **Grids**: Larger grids from which smaller chips are derived, with some grids spatially separated to optimize area coverage.
+### 🧠 FTW Baseline Models  
+
+Reference implementations of machine learning models trained on the FTW Benchmark Dataset. These models offer starting points and performance baselines for researchers and practitioners. Check out the baseline models at [github.com/fieldsoftheworld/ftw-baselines/releases/tag/v1](https://github.com/fieldsoftheworld/ftw-baselines/releases/tag/v1).
+
+### 🛠️ FTW Tools  
+
+A growing suite of tools to support end-to-end workflows:
+
+- **Data access tools**: CLI to download and work with the benchmark dataset (FTW CLI, which you can find in the [ftw-baselines](https://github.com/fieldsoftheworld/ftw-baselines) repository)
+- **Inference tools**: CLI to run field boundary detection on new imagery (FTW CLI, which you can find in the [ftw-baselines](https://github.com/fieldsoftheworld/ftw-baselines) repository)
+- **Formatting tools**: Resources to convert raw data into FTW-compliant format (e.g., fiboa to FTW train/test split) (fiboa CLI, which you can find in the [fiboa/cli](https://github.com/fiboa/cli) repository)
+- **QGIS Plugin**: A plugin to browse and interact with field data within QGIS. Currently in alpha ([ftw-qgis-plugin](https://github.com/fieldsoftheworld/ftw-qgis-plugin))
+
+### 🌐 FTW Web App  
+
+A browser-based interface to easily run FTW models in any area of the world without running any code. Check out the FTW Web App at [fieldsofthe.world/ftw-inference-app](https://fieldsofthe.world/ftw-inference-app/).
+
+Improvements to the web app are under progress. See the codebase for the app at [ftw-inference-app](https://github.com/fieldsoftheworld/ftw-inference-app).
+
+The web app is powered by an API (see [ftw-inference-api](https://github.com/fieldsoftheworld/ftw-inference-api)) and deployed to AWS via [ftw-api-deployment](https://github.com/fieldsoftheworld/ftw-api-deployment).
+
+### 🗺️ FTW Data Products  
+
+Large-scale outputs of model-inferred field boundaries (e.g., country-wide field maps). While no full-country maps have been published yet, efforts are currently underway in Kenya, Vietnam, Laos, Colombia, and other countries/regions. These outputs will be versioned and openly published to support external evaluation, planning, and downstream applications. As model quality improves, we aim to scale toward a global field boundary dataset.
+
+## Related Work
+
+### **Fi**eld **Bo**undaries for **A**griculture (fiboa)
+
+The **Fi**eld **Bo**undaries for **A**griculture (fiboa) project is focused on making field boundary data openly available in a unified format on a global scale.
+
+Curated public datasets of field boundaries from government sources and hand-labeling campaigns, that may serve as inputs to the benchmark dataset. These are converted to the [fiboa](https://fiboa.org) specification. Fiboa data can be found at [https://source.coop/fiboa](https://source.coop/fiboa).
+
+The data found in the Source Cooperative [kerner-lab](https://source.coop/kerner-lab) organization are in the fiboa format.
+
+In the future, FTW datasets may be sourced from the fiboa datasets prior to FTW subsetting and harmonization.
+
+---
+
+## 🤝 Get Involved
+
+We welcome contributions of:
+
+- Field boundary datasets
+- Model improvements
+- Tool development
+- Promotion and educational materials (blog posts, documentation, talks, papers, social media)
+- Feedback and ideas
+
+🧑‍💻 Check out our repositories  
+📬 [Follow the journey](https://groups.google.com/g/ftw-community) by joining the 'ftw-community' Google Group  
+🌐 [Join the working team](https://groups.google.com/g/ftw-team) meetings by joining the 'ftw-team' Google Group
+
+- **FTW General Progress Meeting** every 2 weeks on Thursday @  8am PT | 9am MT | 10am CT | 11am ET
+- **Scaling FTW Meeting** every 2 weeks on Tuesday @ 8am PT | 9am MT | 10am CT | 11am ET
