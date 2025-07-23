@@ -6,7 +6,7 @@ The goal of **F**ields of **T**he **W**orld (FTW) is to build a global field bou
 
 Most countries don’t have comprehensive maps of their agricultural fields, and even fewer have up-to-date information on what crops are growing or whether sustainable practices are being used. Our approach to solving this is to leverage Earth observation data and AI to automatically detect field boundaries at scale. By combining open satellite imagery with machine learning, we aim to build a global, open, and regularly updated map of the world’s fields. The intention is that these field boundaries will enable better land use monitoring, food security efforts, and agricultural insights. You can learn more at [fieldsofthe.world](https://fieldsofthe.world).
 
-This GitHub organization contains all the code to download and use the FTW Benchmark Dataset, along with repositories that make it easy to run FTW models and generate field boundaries.
+This GitHub organization contains all the code to download and use the FTW Benchmark Dataset, along with repositories that make it easy to run FTW and other field delineation models and generate field boundaries.
 
 The FTW Benchmark Dataset is available on Source Cooperative ([source.coop/kerner-lab/fields-of-the-world](https://source.coop/kerner-lab/fields-of-the-world)), and the [ftw-baselines](https://github.com/fieldsoftheworld/ftw-baselines) repository provides tools to easily start working with the FTW Benchmark Dataset, including tools for data pre-processing, model training, and evaluation. You can also suggest new datasets to add in the [ftw-datasets-list issue tracker](https://github.com/fieldsoftheworld/ftw-datasets-list/issues).
 
@@ -38,6 +38,8 @@ A growing suite of tools to support end-to-end workflows:
 - **Inference tools**: CLI to run field boundary detection on new imagery (FTW CLI, which you can find in the [ftw-baselines](https://github.com/fieldsoftheworld/ftw-baselines) repository)
 - **Formatting tools**: Resources to convert raw data into FTW-compliant format (e.g., fiboa to FTW train/test split) (fiboa CLI, which you can find in the [fiboa/cli](https://github.com/fiboa/cli) repository)
 - **QGIS Plugin**: A plugin to browse and interact with field data within QGIS. Currently in alpha ([ftw-qgis-plugin](https://github.com/fieldsoftheworld/ftw-qgis-plugin))
+
+The goal for both the tools and the web app is to make it easy to run a number of field boundary models, not just FTW baseline models or FTW benchmark data derived ones.
 
 ### 🌐 FTW Web App  
 
