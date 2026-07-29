@@ -83,3 +83,22 @@ We welcome contributions of:
 
 - **FTW General Progress Meeting** every 2 weeks on Thursday @  8am PT | 9am MT | 10am CT | 11am ET
 - **Scaling FTW Meeting** every 2 weeks on Tuesday @ 8am PT | 9am MT | 10am CT | 11am ET
+
+## 📝 How to Cite
+
+Please use the following citation for the Fields of The World benchmark dataset and this repository: 
+
+```
+@article{kerner2025fields, 
+  title={Fields of The World: A Machine Learning Benchmark Dataset for Global Agricultural Field Boundary Segmentation}, 
+  volume={39}, 
+  url={https://ojs.aaai.org/index.php/AAAI/article/view/35034}, 
+  DOI={10.1609/aaai.v39i27.35034}, 
+  number={27}, 
+  journal={Proceedings of the AAAI Conference on Artificial Intelligence}, 
+  author={Kerner, Hannah and Chaudhari, Snehal and Ghosh, Aninda and Robinson, Caleb and Ahmad, Adeel and Choi, Eddie and Jacobs, Nathan and Holmes, Chris and Mohr, Matthias and Dodhia, Rahul and Lavista Ferres, Juan M and Marcus, Jennifer}, 
+  year={2025}, 
+  month={Apr.}, 
+  pages={28151-28159} 
+}
+```
